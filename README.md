@@ -15,27 +15,6 @@
 
 ---
 
-## 📁 Project Structure
-
-nexcraft-gocore-starter-kit/
-│
-├── cmd/ # App entrypoint (main.go)
-├── config/ # Env loader
-├── controllers/ # HTTP handlers
-├── database/ # PostgreSQL connection setup
-├── internal/
-│ ├── models/ # Data models
-│ └── services/ # Business logic
-├── routes/ # API route definitions
-├── scripts/ # SQL initialization scripts
-├── utils/ # Reusable helpers (coming soon)
-├── .env # Environment config (sample provided)
-├── go.mod # Go module config
-└── go.sum # Go module checksums
-
-
----
-
 ## 🛠️ Getting Started
 
 ### 1. Clone the Repository
@@ -43,8 +22,9 @@ nexcraft-gocore-starter-kit/
 ```bash
 git clone https://github.com/yourusername/nexcraft-gocore-starter-kit.git
 cd nexcraft-gocore-starter-kit
+```
 
-2. Setup PostgreSQL
+### 2. Setup PostgreSQL
 
 Create a database:
 
@@ -54,7 +34,7 @@ Run the schema:
 
 psql -U your_user -d nexcraft_dev -f scripts/init.sql
 
-3. Configure Environment Variables
+### 3. Configure Environment Variables
 
 Copy the example config:
 
@@ -69,7 +49,7 @@ DB_USER=postgres
 DB_PASSWORD=yourpassword
 DB_NAME=nexcraft_dev
 
-4. Run the Application
+### 4. Run the Application
 
 go run cmd/main.go
 
@@ -77,6 +57,9 @@ go run cmd/main.go
 Method	Endpoint	Description
 GET	/api/users	Get all users
 POST	/api/users	Create a new user
+
+---
+
 📦 Dependencies
 
     Fiber – Web framework
@@ -85,9 +68,14 @@ POST	/api/users	Create a new user
 
     godotenv – .env file loader
 
+---
+
 📜 License
 
 MIT License. You are free to use this for personal, educational, or commercial purposes.
+
+---
+
 💡 About Nexcraft
 
 Nexcraft Studio builds practical developer tools and digital products to help startups and teams launch faster.
