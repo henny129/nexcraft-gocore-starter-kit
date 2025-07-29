@@ -51,9 +51,9 @@ DB_PASSWORD=yourpassword
 DB_NAME=nexcraft_dev
 ```
 ### 4. Run the Application
-
+```bash
 go run cmd/main.go
-
+```
 🔀 Sample API Routes
 Method	Endpoint	Description
 GET	    /api/users	Get all users
