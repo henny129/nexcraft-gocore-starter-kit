@@ -1,61 +1,66 @@
-🚀 Nexcraft GoCore – REST API Starter Kit
+# 🚀 Nexcraft GoCore – REST API Starter Kit
 
-Nexcraft GoCore is a modern, clean, and extensible REST API boilerplate built with Golang, Fiber, and PostgreSQL using sqlx. It helps you bootstrap your Go backend projects faster with production-ready architecture and essential features out of the box.
-✨ Features
+**Nexcraft GoCore** is a clean, modern, and extensible REST API boilerplate built with **Golang**, **Fiber**, and **PostgreSQL** using `sqlx`. It’s designed to help developers start backend projects faster with a modular architecture and production-ready setup.
 
-    ⚡ Fiber Framework – Blazing-fast HTTP web framework
+---
 
-    🧱 Modular Architecture – Clean and maintainable project structure
+## ✨ Features
 
-    🔐 Environment Config – Easy switching with .env support
+- ⚡ **Fiber Framework** – Fast, minimalist web framework for Go
+- 🧱 **Modular Architecture** – Clean separation of concerns (Controllers, Services, Models)
+- 🔐 **Environment Config** – Seamless config management with `.env`
+- 🗃️ **PostgreSQL + sqlx** – Flexible and performant SQL layer
+- 🧩 **Middleware-Ready** – Extend with logging, auth, rate limiting, etc.
+- 🔁 **Starter CRUD** – User module (Create & Read included)
 
-    🗃️ PostgreSQL + sqlx – Structured SQL with flexibility
+---
 
-    🧩 Middleware-Ready – Easily add auth, logging, rate limiting, etc.
-
-    🔁 Starter CRUD – User module with Create and Read already implemented
-
-📁 Project Structure
+## 📁 Project Structure
 
 nexcraft-gocore-starter-kit/
 │
-├── cmd/           # App entrypoint (main.go)
-├── config/        # Env loader
-├── controllers/   # HTTP handlers (for routing logic)
-├── database/      # PostgreSQL connection setup
+├── cmd/ # App entrypoint (main.go)
+├── config/ # Env loader
+├── controllers/ # HTTP handlers
+├── database/ # PostgreSQL connection setup
 ├── internal/
-│   ├── models/    # Data models
-│   └── services/  # Business logic layer
-├── routes/        # API route definitions
-├── scripts/       # SQL initialization scripts
-├── utils/         # Helper functions (coming soon)
-├── .env           # Environment configuration
-├── go.mod         # Go module definition
-└── go.sum         # Go module checksums
+│ ├── models/ # Data models
+│ └── services/ # Business logic
+├── routes/ # API route definitions
+├── scripts/ # SQL initialization scripts
+├── utils/ # Reusable helpers (coming soon)
+├── .env # Environment config (sample provided)
+├── go.mod # Go module config
+└── go.sum # Go module checksums
 
-🛠️ Getting Started
-1. Clone the Repository
 
-git clone https://github.com/yourname/nexcraft-gocore-starter-kit.git
+---
+
+## 🛠️ Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/nexcraft-gocore-starter-kit.git
 cd nexcraft-gocore-starter-kit
 
 2. Setup PostgreSQL
 
-Create a new database:
+Create a database:
 
 CREATE DATABASE nexcraft_dev;
 
-Run the initialization script:
+Run the schema:
 
 psql -U your_user -d nexcraft_dev -f scripts/init.sql
 
 3. Configure Environment Variables
 
-Copy .env.example to .env:
+Copy the example config:
 
 cp .env.example .env
 
-Edit the .env file:
+Edit .env:
 
 APP_PORT=3000
 DB_HOST=localhost
@@ -64,22 +69,25 @@ DB_USER=postgres
 DB_PASSWORD=yourpassword
 DB_NAME=nexcraft_dev
 
-4. Run the App
+4. Run the Application
 
 go run cmd/main.go
 
+🔀 Sample API Routes
+Method	Endpoint	Description
+GET	/api/users	Get all users
+POST	/api/users	Create a new user
 📦 Dependencies
 
     Fiber – Web framework
 
-    sqlx – Database layer
+    sqlx – SQL toolkit for Go
 
-    godotenv – Loads .env files into os.Environ
+    godotenv – .env file loader
 
 📜 License
 
-This project is licensed under the MIT License.
-Feel free to use it for personal or commercial purposes.
+MIT License. You are free to use this for personal, educational, or commercial purposes.
 💡 About Nexcraft
 
-Nexcraft Studio builds practical developer tools and digital products to help startups, developers, and businesses launch faster.
+Nexcraft Studio builds practical developer tools and digital products to help startups and teams launch faster.
