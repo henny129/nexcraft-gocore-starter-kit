@@ -27,35 +27,36 @@ cd nexcraft-gocore-starter-kit
 ### 2. Setup PostgreSQL
 
 Create a database:
-
+```bash
 CREATE DATABASE nexcraft_dev;
-
+```
 Run the schema:
-
+```bash
 psql -U your_user -d nexcraft_dev -f scripts/init.sql
+```
 
 ### 3. Configure Environment Variables
 
 Copy the example config:
-
+```bash
 cp .env.example .env
-
+```
 Edit .env:
-
+```bash
 APP_PORT=3000
 DB_HOST=localhost
 DB_PORT=5432
 DB_USER=postgres
 DB_PASSWORD=yourpassword
 DB_NAME=nexcraft_dev
-
+```
 ### 4. Run the Application
 
 go run cmd/main.go
 
 🔀 Sample API Routes
 Method	Endpoint	Description
-GET	/api/users	Get all users
+GET	    /api/users	Get all users
 POST	/api/users	Create a new user
 
 ---
